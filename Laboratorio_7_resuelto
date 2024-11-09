@@ -1,0 +1,69 @@
+
+# importar Librerias
+import numpy as np
+import pandas as pd
+
+# Crear un DataFrame con los nombres, profesión y países de 8 personas, y luego imprimir el DataFrame.
+
+data = {'Nombres': ['Fabian Andres Lopez', 'Ana Maria Garcia', 'Patricia Lopez', 'Linda Duran','Julian Manzano','Linda Castillo','Andres Calero','Oscar Castro'],
+        'Profesion': ['Ginecologo', 'Medico General', 'Medicina Interna', 'Fisioterapeuta','Medico General','Enfermera','Oftalmologo','Medico familiar'],
+        'Paises': ['Colombia', 'Colombia', 'Colombia', 'Colombia','Colombia','Colombia','Colombia','Colombia']}
+base = pd.DataFrame(data)
+print(base)
+
+
+
+# Cargar un archivo CSV (puedes usar un archivo de ejemplo en tu entorno) y mostrar las primeras 5 filas.
+
+import pandas as pd
+df = pd.read_csv('data.csv')
+df.head(10)
+
+# Generar un DataFrame con 100 filas y 8 columnas de valores aleatorios, y luego mostrar un resumen estadístico de los datos.
+import pandas as pd
+import numpy as np
+df1= pd.DataFrame(np.random.rand(100,8))
+df1.head(50)
+df1.describe()
+
+
+
+**Parte 2**
+El segundo ejercicio de práctica deberás realizar el código usando las funciones y bibliotecas Numpy en Python, con el respectivo grafico según los escenarios, escribir el respectivo código y mostrar el resultado, aplicar los temas vistos en clase.
+
+# Crear un array de números del 1 al 10 y mostrar la suma, la media, y el valor máximo.
+array = np.array([1,2,3,4,5,6,7,8,9,10])
+suma = np.sum(array)
+media = np.mean(array)
+maximo = np.max(array)
+print("Array:", array)
+print()
+print("Suma:", suma)
+print("Media:", media)
+print("Máximo:", maximo)
+
+#Crear un array de 3x4 lleno de ceros y luego cambiar su forma a 2x6
+
+arr= np.arange(12)
+arr= np.zeros((3, 4))
+print("Array original:")
+print(arr)
+arr_nuevo = arr.reshape((2, 6))
+print("\nArray con nueva forma:")
+print(arr_nuevo)  
+
+
+# Generar una matriz aleatoria de 3x3 y calcular su transpuesta.
+matriz_aleatoria = np.random.rand(3, 3)
+print("Matriz aleatoria:")
+print(matriz_aleatoria)
+transpuesta = np.transpose(matriz_aleatoria)
+print("\nTranspuesta de la matriz:")
+print(transpuesta)
+
+
+# Concatenar dos arrays de NumPy, cada uno con 5 valores, y luego imprimir el array concatenado.
+array1 = np.array([1, 2, 3, 4, 5])
+array2 = np.array([6, 7, 8, 9, 10])
+array_concatenado = np.concatenate((array1, array2))
+print("Array concatenado:", array_concatenado)
